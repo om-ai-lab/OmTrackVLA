@@ -207,8 +207,8 @@ Tune `CHUNKS`, `NUM_PARALLEL`, or the Habitat config inside `eval.sh` to rebalan
 | EVT‡         | 32.5 / 49.9 / 40.5     | 15.7 / 35.7 / 53.3   | 18.3 / 21.0 / 44.9   |
 | Uni-NaVid (Vicuna-7B)    | 25.7 / 39.5 / 41.9     | 11.3 / 27.4 / 43.5   | 8.26 / 28.6 / 43.7   |
 | TrackVLA (Vicuna-7B)     | 85.1 / 78.6 / 1.65     | 57.6 / 63.2 / 5.80   | 50.2 / 63.7 / 17.1   |
-| Previous ckpt (Qwen-0.6B)  | 64.8 / 84.4 / 5.00     | 33.6 / 66.3 / 8.84   | 39.6 / 76.7 / 6.38   |
-| Our latest ckpt (Qwen-0.6B)  | 81.41 / 82.77 / 5.13     | 41.54 / 58.80 / 11.31   | 60.04 / 73.89 / 7.60   |
+| Previous ckpt (0.6B)  | 64.8 / 84.4 / 5.00     | 33.6 / 66.3 / 8.84   | 39.6 / 76.7 / 6.38   |
+| Our latest ckpt (0.6B)  | 81.41 / 82.77 / 5.13     | 41.54 / 58.80 / 11.31   | 60.04 / 73.89 / 7.60   |
 
 
 † Uses GroundingDINO as the open-vocabulary detector. ‡ Uses SoM + GPT-4o as the vision stack (see the TrackVLA paper Table 2).
@@ -219,8 +219,6 @@ Tune `CHUNKS`, `NUM_PARALLEL`, or the Habitat config inside `eval.sh` to rebalan
 
 ## 📚 Resources & References
 - Baseline checkpoint: [omlab/opentrackvla-qwen06b](https://huggingface.co/omlab/opentrackvla-qwen06b)
-- LLM backbone: [Qwen/Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B)
-- Vision towers: [facebook/dinov3-vits16-pretrain-lvd1689m](https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m), [google/siglip-so400m-patch14-384](https://huggingface.co/google/siglip-so400m-patch14-384)
 - TrackVLA: Embodied Visual Tracking in the Wild [arXiv:2505.23189](https://arxiv.org/abs/2505.23189)
 - Embodied Navigation Foundation Model [arXiv:2509.12129](https://arxiv.org/abs/2509.12129)
 
