@@ -1,26 +1,26 @@
-# OpenTrackVLA 🤖 👀
+# OmTrackVLA 🤖 👀
 
 **Visual Navigation & Following for Everyone.**
 
 [](https://opensource.org/licenses/Apache-2.0) [](https://www.google.com/search?q=) [](https://www.google.com/search?q=) [](https://arxiv.org/abs/2509.12129)
 
-**OpenTrackVLA** is a fully open-source Vision-Language-Action (VLA) stack that turns **monocular video** and **natural-language instructions** into actionable, short-horizon waypoints.
+**OmTrackVLA** is a fully open-source Vision-Language-Action (VLA) stack that turns **monocular video** and **natural-language instructions** into actionable, short-horizon waypoints.
 
 This repository is dedicated to democratizing embodied AI. We have intentionally released our highly efficient **0.6B checkpoint** along with the **full training pipeline**.
 
-### 🚀 Why OpenTrackVLA?
+### 🚀 Why OmTrackVLA?
 
   * **Fully Open Source:** We release the model weights, inference code, *and* the training stack—not just the inference wrapper.
   * **Accessible:** Designed to reproduce, fine-tune, and deploy with affordable compute .
   * **Multimodal Control:** Combines learned priors with visual input to guide real or simulated robots via simple text prompts.
 
-> **Acknowledgment:** OpenTrackVLA builds on the ideas introduced by the original [TrackVLA project](https://github.com/wsakobe/TrackVLA). Their partially-open release inspired this community-driven effort to keep the ecosystem open so researchers and developers can continue improving the stack together.
+> **Acknowledgment:** OmTrackVLA builds on the ideas introduced by the original [TrackVLA project](https://github.com/wsakobe/TrackVLA). Their partially-open release inspired this community-driven effort to keep the ecosystem open so researchers and developers can continue improving the stack together.
 
 ---
 
 ## 📢 News & Updates
 
-- 🔥 We have updated the model weights and refreshed the benchmark scores in the performance table. The latest checkpoint is available at **[omlab/opentrackvla-qwen06b](https://huggingface.co/omlab/opentrackvla-qwen06b)**. We will keep updating — **please keep watching this repository!**
+- 🔥 We have updated the model weights and refreshed the benchmark scores in the performance table. The latest checkpoint is available at **[omlab/OmTrackVLA-0.6B](https://huggingface.co/omlab/OmTrackVLA-0.6B)**. We will keep updating — **please keep watching this repository!**
 - **[Coming Soon]** 📦 We will be releasing the full training data. Stay tuned!
 
 ---
@@ -48,8 +48,8 @@ The system processes video history and text instructions to predict future waypo
    ```
 3. **Clone this repository**
    ```bash
-   git clone https://github.com/om-ai-lab/OpenTrackVLA.git
-   cd OpenTrackVLA
+   git clone https://github.com/om-ai-lab/OmTrackVLA.git
+   cd OmTrackVLA
    ```
 4. **Install Habitat-Lab**
    ```bash
@@ -179,11 +179,11 @@ python train.py \
 ### 5.1 Using the Pre-trained 0.6B Model
 - **Option A — Auto-download**
   ```bash
-  HF_MODEL_ID=omlab/opentrackvla-qwen06b bash eval.sh
+  HF_MODEL_ID=omlab/OmTrackVLA-0.6B bash eval.sh
   ```
 - **Option B — Manual download**
   ```bash
-  huggingface-cli download omlab/opentrackvla-qwen06b --local-dir open_trackvla_hf
+  huggingface-cli download omlab/OmTrackVLA-0.6B --local-dir open_trackvla_hf
   HF_MODEL_DIR=$(pwd)/open_trackvla_hf bash eval.sh
   ```
 
@@ -213,27 +213,27 @@ Tune `CHUNKS`, `NUM_PARALLEL`, or the Habitat config inside `eval.sh` to rebalan
 
 † Uses GroundingDINO as the open-vocabulary detector. ‡ Uses SoM + GPT-4o as the vision stack (see the TrackVLA paper Table 2).
 
-**Transparency note:** With the updated 0.6B checkpoint, OpenTrackVLA now surpasses the 7B TrackVLA baseline on success rate (SR↑) in the AT setting (60.04 vs 50.2) while remaining competitive on STT (81.41 vs 85.1). Tracking rate (TR↑) leads on STT and AT, with a marginal gap on DT. Collision rate (CR↓) is lower than TrackVLA on AT but remains higher on STT and DT — reducing collisions in denser scenarios without sacrificing tracking performance is an active area of improvement. We continue to prioritize this lightweight release to keep reproduction and fine-tuning accessible.
+**Transparency note:** With the updated 0.6B checkpoint, OmTrackVLA now surpasses the 7B TrackVLA baseline on success rate (SR↑) in the AT setting (60.04 vs 50.2) while remaining competitive on STT (81.41 vs 85.1). Tracking rate (TR↑) leads on STT and AT, with a marginal gap on DT. Collision rate (CR↓) is lower than TrackVLA on AT but remains higher on STT and DT — reducing collisions in denser scenarios without sacrificing tracking performance is an active area of improvement. We continue to prioritize this lightweight release to keep reproduction and fine-tuning accessible.
 
 
 
 ## 📚 Resources & References
-- Baseline checkpoint: [omlab/opentrackvla-qwen06b](https://huggingface.co/omlab/opentrackvla-qwen06b)
+- Baseline checkpoint: [omlab/OmTrackVLA-0.6B](https://huggingface.co/omlab/OmTrackVLA-0.6B)
 - TrackVLA: Embodied Visual Tracking in the Wild [arXiv:2505.23189](https://arxiv.org/abs/2505.23189)
 - Embodied Navigation Foundation Model [arXiv:2509.12129](https://arxiv.org/abs/2509.12129)
 
 ## Citation
 
-If you find OpenTrackVLA useful in your research or applications, please cite it using the following BibTeX:
+If you find OmTrackVLA useful in your research or applications, please cite it using the following BibTeX:
 
 ```bibtex
-@misc{opentrackvla2025,
+@misc{omtrackvla2025,
   author       = {Kyusong Lee, Heting Ying and Tiancheng Zhao},
-  title        = {OpenTrackVLA: Open-Source Visual Language Action Model for Visual Navigation and Following},
+  title        = {OmTrackVLA: Open-Source Visual Language Action Model for Visual Navigation and Following},
   year         = {2025},
   publisher    = {GitHub},
   journal      = {GitHub Repository},
-  howpublished = {https://github.com/om-ai-lab/OpenTrackVLA}
+  howpublished = {https://github.com/om-ai-lab/OmTrackVLA}
 }
 ```
 
