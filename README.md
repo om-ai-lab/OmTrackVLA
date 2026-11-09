@@ -236,5 +236,12 @@ If you find OmTrackVLA useful in your research or applications, please cite it u
   howpublished = {https://github.com/om-ai-lab/OmTrackVLA}
 }
 ```
-
+```bibtex
+@article{lee2026vlx,
+  title={VLX-Go: Robust Embodied Tracking through Multi-Stage Learning and On-Policy Refinement},
+  author={Lee, Kyusong and Ying, Heting and Zhao, Tiancheng},
+  journal={arXiv preprint arXiv:2610.19361},
+  year={2026}
+}
+```
 **Happy tracking!** Contributions and issue reports are welcome via pull requests.
